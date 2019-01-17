@@ -14,3 +14,11 @@ sed -i "s/string/替换了/" test.txt
 
 # 删除含有string的行 并在文档末尾加一行“删掉了含有string的行”
 sed -i -e "/string/d" -e "/$/a 删掉了含有string的行" test.txt
+
+# 文档追加
+echo "string" >> file1
+cat file1 >> file2
+cat file1 |grep string >> file2
+grep string file1 >> file2
+# 选出内容覆盖到文档
+grep "string" file1 > file2

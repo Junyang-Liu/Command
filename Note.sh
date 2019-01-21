@@ -6,6 +6,9 @@ tar -zcvf tarname.tar --exclude=dirname/log dirname
 # 解压到
 tar -xvf tarname.tar -C dirname
 
+# 拷贝文件到远程服务器 登录账户名@地址:目录
+scp dirname username@xxx.xxx.xxx.xxx:/home/
+
 # 提取要的行 
 sed -n "2,10"p test.txt 
 
